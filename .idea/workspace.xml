@@ -7,12 +7,14 @@
       <change afterPath="$PROJECT_DIR$/public/js/app1.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/resources/views/Content/Contents.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/resources/views/Content/Presentation.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/Home.blade.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/resources/views/Sidebar.blade.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../sidebar/.idea/sidebar.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Home.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Project_Mgmnt/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/../Project_Mgmnt/public/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Project_Mgmnt/public/js/app1.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Project_Mgmnt/public/js/app1.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Project_Mgmnt/resources/views/Home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Project_Mgmnt/resources/views/Home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Sample/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Sample/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Sample/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Sample/.idea/workspace.xml" afterDir="false" />
     </list>
@@ -48,11 +50,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/Home.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="19" column="56" selection-start-line="19" selection-start-column="51" selection-end-line="19" selection-end-column="56" />
+            <state relative-caret-position="322">
+              <caret line="104" column="112" selection-start-line="104" selection-start-column="112" selection-end-line="104" selection-end-column="112" />
             </state>
           </provider>
         </entry>
@@ -60,8 +62,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/Sidebar.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="30" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
+            <state relative-caret-position="612">
+              <caret line="36" column="24" lean-forward="true" selection-start-line="36" selection-start-column="24" selection-end-line="36" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -69,8 +71,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/Content/Contents.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="98" lean-forward="true" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="98" />
+            <state relative-caret-position="102">
+              <caret line="21" column="57" selection-start-line="21" selection-start-column="57" selection-end-line="21" selection-end-column="57" />
             </state>
           </provider>
         </entry>
@@ -78,17 +80,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="197">
-              <caret line="310" column="24" selection-start-line="310" selection-start-column="24" selection-end-line="310" selection-end-column="24" />
+            <state relative-caret-position="183">
+              <caret line="300" column="16" lean-forward="true" selection-start-line="300" selection-start-column="16" selection-end-line="300" selection-end-column="16" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/js/app1.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-378">
-              <caret line="9" column="7" lean-forward="true" selection-end-line="57" selection-end-column="6" />
+            <state relative-caret-position="68">
+              <caret line="25" column="32" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -118,9 +120,9 @@
       <find>1px solid white</find>
       <find>inside contents-list display-3 lead text-white</find>
       <find>wew</find>
-      <find>.inside</find>
       <find>row border border-secondary pointer hw-output</find>
       <find>inside contents-list display-3 lead text-white text-center</find>
+      <find>.inside</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -238,8 +240,7 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="161" />
-    <option name="y" value="61" />
+    <option name="x" value="-26" />
     <option name="width" value="1936" />
     <option name="height" value="1056" />
   </component>
@@ -329,15 +330,16 @@
       <updated>1565848692000</updated>
       <workItem from="1565848693094" duration="2868000" />
       <workItem from="1565851612940" duration="10692000" />
-      <workItem from="1565914107191" duration="18763000" />
+      <workItem from="1565914107191" duration="25068000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32323000" />
+    <option name="totallyTimeSpent" value="38628000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2553305" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -404,13 +406,6 @@
     <entry file="file://$PROJECT_DIR$/resources/views/Content/Presentation.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="310" column="24" selection-start-line="310" selection-start-column="24" selection-end-line="310" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/web.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -418,31 +413,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Sidebar.blade.php">
+    <entry file="file://$PROJECT_DIR$/public/js/app1.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="30" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Home.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="19" column="56" selection-start-line="19" selection-start-column="51" selection-end-line="19" selection-end-column="56" />
+        <state relative-caret-position="68">
+          <caret line="25" column="32" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/Content/Contents.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="98" lean-forward="true" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="98" />
+        <state relative-caret-position="102">
+          <caret line="21" column="57" selection-start-line="21" selection-start-column="57" selection-end-line="21" selection-end-column="57" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/app1.js">
+    <entry file="file://$PROJECT_DIR$/public/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-378">
-          <caret line="9" column="7" lean-forward="true" selection-end-line="57" selection-end-column="6" />
+        <state relative-caret-position="183">
+          <caret line="300" column="16" lean-forward="true" selection-start-line="300" selection-start-column="16" selection-end-line="300" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Sidebar.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="36" column="24" lean-forward="true" selection-start-line="36" selection-start-column="24" selection-end-line="36" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Home.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="104" column="112" selection-start-line="104" selection-start-column="112" selection-end-line="104" selection-end-column="112" />
         </state>
       </provider>
     </entry>
