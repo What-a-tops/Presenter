@@ -1,11 +1,8 @@
-
 $(document).ready(function (e) {
     getTitles();
     getDataLists();
 
     $( ".data_lists" ).click(function() {
-        // alert($(this).find('p').text());
-        // $('#preview_lists').fadeToggle("slow");
         $('#preview_lists').text($(this).find('p').text()).fadeIn();
     });
 });
@@ -49,10 +46,15 @@ $('#list_table tbody tr').on('click', function () {
     $(this).addClass('uniColor').siblings().removeClass('uniColor');
 });
 
-// $('.data_lists').on('click', function (e) {
-//    e.preventDefault();
-//    console.log("wew");
-//    // $(this).text();
-//    // console.log($(this));
-//    // console.log($(this).text());
-// });
+$('#appendText').on('click', function (e) {
+    e.preventDefault();
+    let html = ' <div class="form-group">' +
+                  '<textarea class="form-control" id="message-text" placeholder="Enter Lyrics" required></textarea>' +
+              '</div>';
+
+    console.log($('#message-text').length);
+
+    $('#lyrics_list').append(html);
+
+
+});

@@ -1,3 +1,7 @@
+input, textarea {
+    color: white !important;
+}
+
 .uniColor {
     background-color: #7386D5!important;
 }
@@ -5,8 +9,7 @@
     background-color: #424242 !important;
 }
 .form-control:hover {
-    background-color: #424242;
-!important;
+    background-color: #424242 !important;
 }
 .btn-color:hover {
     background-color: #6d7fcc !important;
