@@ -14,3 +14,5 @@
 Route::get('/', function () {
     return view('Home');
 });
+
+Route::post('/ajax_upload/action', 'AjaxUploadController@action')->name('ajaxupload.action');

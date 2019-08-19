@@ -5,7 +5,7 @@
         <strong>PV</strong>
     </div>
 
-    <ul class="list-unstyled components">
+    <ul class="list-unstyled components" id="menus">
         <li class="active">
              <a href="#">
                  <i class="fas fa-tachometer-alt"></i>

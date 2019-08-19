@@ -2,15 +2,13 @@ input, textarea {
     color: white !important;
 }
 
-.uniColor {
+.uniColor, .btn-color, .border-btn {
     background-color: #7386D5!important;
 }
-.btn-color, .form-control {
+.form-control, .form-control:hover, .card-body {
     background-color: #424242 !important;
 }
-.form-control:hover {
-    background-color: #424242 !important;
-}
+
 .btn-color:hover {
     background-color: #6d7fcc !important;
 }
@@ -25,6 +23,7 @@ input, textarea {
     background-color: #424242 !important;
     border: none;
 }
+
 body {
     font-family: 'Poppins', sans-serif;
     background: #424242;
@@ -41,6 +40,21 @@ a,a:hover,a:focus {
     text-decoration: none;
     transition: all 0.3s;
 }
+
+.dropdown-item {
+    color: white !important;
+}
+
+#sidebar ul li a:hover, #sidebar ul li.active > a {
+    background-color: #424242 !important;
+    color: white !important;
+}
+
+div.dropdown-menu a:hover {
+    color: white !important;
+    background-color: #424242 !important;
+}
+
 .navbar {
     padding: 15px 10px;
     background: #fff;
@@ -121,7 +135,7 @@ i,span {
 }
 #sidebar ul.components {
     padding: 20px 0;
-    border-bottom: 1px solid #6c757d!important;
+    border-bottom: 1px solid white!important;
 }
 #sidebar ul li a {
     padding: 10px;
@@ -248,17 +262,17 @@ a.article,a.article:hover {
     margin-top: 10px;
 }
 #list_table {
-    margin-top: 25px !important;
+    margin-top: 12px !important;
 }
-.h-815 {
-    min-height: 815px !important;
-}
-#output_view {
-    min-height: 811px !important;
-}
-.h-450 {
-    min-height: 450px !important;
-}
+/*.h-815 {*/
+/*    min-height: 815px !important;*/
+/*}*/
+/*#output_view {*/
+/*    min-height: 811px !important;*/
+/*}*/
+/*.h-450 {*/
+/*    min-height: 450px !important;*/
+/*}*/
 
 .hw-output {
     min-height: 125px;
@@ -307,7 +321,8 @@ footer {
     width: 100%;
     height: 100%;
     display: table;
-    min-height: 450px !important;
+    min-height: 440px !important;
+    padding: 20px !important;
 }
 
 .inside {
@@ -337,3 +352,124 @@ footer {
 .f-25 {
     font-size: 25px !important;
 }
+
+.card {
+    min-width: 300px !important;
+    min-height: 150px !important;
+    margin-bottom: 15px !important;
+    text-align: center;
+}
+
+.data_lists {
+    height: 200px !important;
+}
+
+@media screen and (min-width: 601px) {
+    div.contents-list {
+        font-size: 50px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    div.contents-list {
+        font-size: 30px;
+    }
+}
+
+.text-view {
+    font-size: .9vw !important;
+}
+
+.modal-content {
+    background-color: #424242 !important;
+}
+
+#btn-add.dropdown-toggle::after {
+    right: 0px !important;
+}
+
+.mg-left-12 {
+    margin-left: 12px !important;
+}
+
+.mg-left-8 {
+    margin-left: 8px !important;
+}
+
+.mg-left-16 {
+    margin-left: 16px !important;
+}
+
+.mg-bottom-15 {
+    margin-bottom: 15px !important;
+}
+
+.chk-container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.chk-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: transparent;
+    border: 1px solid #6c757d!important;
+    border-radius: 3px !important;
+}
+
+.chk-container:hover input ~ .checkmark {
+    background-color: #ccc;
+    transition: all 0.3s;
+}
+
+.chk-container input:checked ~ .checkmark {
+    background-color: #7386D5!important;
+    transition: all 0.3s;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.chk-container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.chk-container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    transition: all 0.3s;
+}
+
+.hidden_div {
+    display: none;
+}
+
