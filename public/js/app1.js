@@ -1,18 +1,30 @@
-$(document).ready(function (e) {
-    $('#removeText').hide();
+$(document).ready(function () {
+    $('#removeText, #default-prev, #play-view').hide();
+    previewScreen(true);
     getTitles();
     getDataLists();
 
-    $( ".data_lists" ).click(function() {
+    $(".data_lists").click(function() {
         $('.text-view').removeClass('text-white');
         // $('#card').removeClass('border-white');
         // $('.cheader').removeClass('text-white');
-        $('#preview_lists').hide().text($(this).find('p').addClass('text-white').text()).fadeIn('slow');
+        // $('#preview_lists').hide().text($(this).find('p').addClass('text-white').text()).fadeIn('slow');
+
+        previewScreen(false);
+
+        let text = $(this).find('p').attr('data').replace(/<br ?\/?>/g, "\r\n");
+        $('#preview_lists').hide().text(text).fadeIn('slow');
+        $(this).find('p').addClass('text-white');
+
+         // let data = $('#preview_lists').hide().text($(this).find('p').attr('data'));
+
+        // console.log($(this).find('p').attr('data'));
+
         // $('#card').removeClass('border-secondary').addClass('border-white');
         // $('.cheader').removeClass('text-secondary').addClass('text-white');
     });
 
-    $('.chk-list').on('change', function(e) {
+    $('.chk-list').on('change', function() {
         let numberOfChecked = $('input.chk-list:checkbox:checked').length;
         let totalCheckboxes = $('input.chk-list:checkbox').length;
         let numberNotChecked = totalCheckboxes - numberOfChecked;
@@ -37,9 +49,9 @@ $(document).ready(function (e) {
         }
     });
 
-    $('#chk-all').on('change', function (e) {
+    $('#chk-all').on('change', function () {
         let length = $('input.chk-list:checkbox').length;
-        for (i = 0; i < length; i++) {
+        for (let i = 0; i < length; i++) {
             $('#chk-list-'+i).prop( "checked", !!this.checked);
             if (!this.checked) {
                 $('.menus-2').hide();
@@ -47,13 +59,33 @@ $(document).ready(function (e) {
             }
         }
     });
+
+    $('.toggle-event').change(function() {
+      $('#console-event').html('Toggle: ' + $(this).prop('checked'))
+    });
 });
 
+function previewScreen(bool) {
+    $('#preview_screen').show();
+    if (bool) {
+
+        $('#default-prev').show();
+        $('#play-view').hide();
+        // $('#toggle-live').attr('Disabled');
+        console.log( $('#toggle-live'));
+    } else {
+        $('#default-prev').hide();
+        $('#play-view').show();
+        // $('#toggle-live').removeAttribute('Disabled');
+    }
+}
+
+
 function getTitles() {
-    $data_array = ["Unod Bukog", "Mr. Swabe", "Dayang-dayang", "Tambay", "7 years old", "Lol"];
+    let data_array = ["Unod Bukog", "Mr. Swabe", "Dayang-dayang", "Tambay", "7 years old", "Lol"];
     let html = "";
-    _.forEach($data_array, function (value, key) {
-        html += ' <tr class="table-row" data-href="http://tutorialsplane.com">' +
+    _.forEach(data_array, function (value, key) {
+        html += ' <tr class="table-row">' +
             '<td class="align-content-center">' +
             '<label class="chk-container">' +
             '<input type="checkbox" class="chk-list" id="chk-list-'+key+'">' +
@@ -86,14 +118,14 @@ function getDataLists() {
         let count = 1;
         _.forEach(value.lyrics, function (val) {
             html +=
-                '<div class="container">' +
+                '<div class="container-mg-lists">' +
                 '<div class="card border-secondary" id="card">' +
-                '<b class="card-header text-left btn-color text-white cheader">Slide' +
+                '<b class="card-header text-left btn-color text-white">Slide' +
                 count++ +
                 '</b>' +
                 '<div class="card-body pointer data_lists">' +
-                '<blockquote class="blockquote mb-0">' +
-                '<p class="text-view">'+val+'</p>' +
+                '<blockquote class="">' +
+                '<p class="text-view" data="'+val+'">'+val+'</p>' +
                 '</blockquote>' +
                 '</div>' +
                 '</div>' +
@@ -139,7 +171,7 @@ $('#saveSong').on('submit', function (e) {
     let lyrics_arr = [];
 
     _.forEach(length, function (val, key) {
-        lyrics_arr += " \r\n" + $('#list-'+key).find('textarea').val() + "\r\n<->";;
+        lyrics_arr += " \r\n" + $('#list-'+key).find('textarea').val() + "\r\n<->";
     });
 
     let data =
@@ -147,7 +179,6 @@ $('#saveSong').on('submit', function (e) {
         'Author: ' + author + ' \r\n ' +
         'Lyrics: ' + lyrics_arr.trim();
 
-    // Convert the text to BLOB.
     const textToBLOB = new Blob([data], { type: 'text/plain' });
     const sFileName = title+ '.txt';	   // The file to save the data.
 
@@ -183,4 +214,15 @@ $('#saveSong').on('submit', function (e) {
     // newLink.click();
 
 });
+
+ // function myFunction() {
+ //      if (video.paused) {
+ //        video.play();
+ //        btn.innerHTML = "Pause";
+ //      } else {
+ //        video.pause();
+ //        btn.innerHTML = "Play";
+ //      }
+ // }
+
 

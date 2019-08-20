@@ -15,41 +15,105 @@
             <div class="menus-2 hidden_div">
                 <div class="row">
                     <div class="col-1 mg-left-12">
-                          <label class="chk-container">
-                          <input type="checkbox" class="chk-all" id="chk-all">
-                          <span class="checkmark"></span>
+                        <label class="chk-container">
+                            <input type="checkbox" class="chk-all" id="chk-all">
+                            <span class="checkmark"></span>
                     </div>
                     <div class="col-8">
-                        <button type="button" class="btn btn-sm btn-danger border-danger" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fas fa-trash-alt"></i></button>
+                        <button type="button" id="deleteList" data-toggle="modal" data-target="#deleteModal" class="btn btn-sm btn-danger border-danger" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fas fa-trash-alt"></i></button>
                         <button type="button" class="btn btn-sm btn-color border-btn text-white" data-toggle="tooltip" data-placement="top" title="Send to Service"><i class="fas fa-share-square"></i></button>
                     </div>
                 </div>
             </div>
 
-            <table class='table table-hover pointer align-content-center' id="list_table"></table>
+            <table class='table table-hover pointer' id="list_table"></table>
         </div>
         <div class="col-9 border border-secondary ">
             <div class="row">
-                <div class="col-4 border-secondary">
-                    1
+                <div class="panel-lists ">
+                     <div class="list-group h-763-serlist overflow-x" id="list-tab" role="tablist">
+                      <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Home</a>
+                      <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">Profile</a>
+                      <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages">Messages</a>
+                      <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Settings</a>
+                         <a class="list-group-item list-group-item-action" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Home</a>
+                      <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">Profile</a>
+                      <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages">Messages</a>
+                      <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Settings</a>
+                           <a class="list-group-item list-group-item-action" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Home</a>
+                      <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">Profile</a>
+                      <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages">Messages</a>
+                      <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Settings</a>
+                           <a class="list-group-item list-group-item-action" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Home</a>
+                      <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">Profile</a>
+                      <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages">Messages</a>
+                      <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Settings</a>
+                           <a class="list-group-item list-group-item-action" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Home</a>
+                      <a class="list-group-item list-group-item-action" id="lst-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">Profile</a>
+                      <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages">Messages</a>
+                      <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Settings</a>
+                           <a class="list-group-item list-group-item-action" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Home</a>
+                      <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">Profile</a>
+                      <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages">Messages</a>
+                      <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Settings</a>
+                    </div>
+
+<!--                    <div class="col-12">-->
+<!--                        <button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button>-->
+<!--                    </div>-->
+
+
                 </div>
+
+
+
                 <div class="col-8 border-left border-secondary">
                     <div class="d-flex flex-row-reverse bd-highlight">
-                        <div class="p-2 bd-highlight">
-                            <input type="checkbox" data-toggle="toggle" data-onstyle="success" data-height="10">
+
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm">
+                                    <div class=" bd-highlight text-white f-25 lead">Senorita</div>
+                                </div>
+
+                                <div class="col-sm">
+                                    <div class="d-flex flex-row-reverse bd-highlight">
+                                        <div class="p2 bd-highlight float-right mg-top-3">
+                                            <input id="toggle-live" type="checkbox" data-toggle="toggle" data-onstyle="success" data-height="10" data-size="small">
+                                        </div>
+                                        <div class=" bd-highlight text-white f-25 lead float-right">Live&nbsp;</div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="p-2 bd-highlight text-white f-25 lead">Live</div>
                     </div>
-                    <div class="container-fluid">
+                    <div class="">
                         <div class="d-flex justify-content-center" id="output_view">
                             <div class="container mg-bottom-15">
                                 <div class="d-flex justify-content-center border border-secondary">
-                                    <div class="contents-list">
-                                        <div class="inside contents-list display-3 lead text-white text-center h-450" id="preview_lists">Hey</div>
+                                    <div class="play-view-list">
+                                        <!--                                        <div class="inside contents-list display-3 lead text-white text-center h-450" id="preview_lists"><i class="fas fa-desktop text-muted display-1"></i></div>-->
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-center">
+                                    <div id="preview_screen">
+                                        <div class="video-default-view" id="default-prev">
+                                            <div class="inside contents-list display-3 lead text-white text-center h-450" ><i class="fas fa-desktop text-muted display-1"></i></div>
+                                        </div>
+
+                                        <div class="col-xs-12 vert-center-container" id="play-view">
+                                            <video autoplay muted loop>
+                                                <source src="https://mdbootstrap.com/img/video/Sail-Away.mp4" />
+                                            </video>
+                                            <div class="vert-center-text">
+                                                <h2 id="preview_lists" class="text-white">Caption Text</h2>
+                                            </div>
+                                        </div>
+
                                     </div>
                                 </div>
                                 <hr>
-                                <div class="container">
+                                <div class="container-fluid">
                                     <div class="flex-row overflow-y" id="list_data"></div>
                                 </div>
                             </div>
@@ -103,6 +167,23 @@
                 <button type="submit" class="btn btn-primary">Save</button>
             </div>
             </form>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title text-white" id="exampleModalLabel">Delete Song</h5>
+            </div>
+            <div class="modal-body text-white text-center">
+                Are you sure you want to delete this list?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-danger">Delete</button>
+            </div>
         </div>
     </div>
 </div>

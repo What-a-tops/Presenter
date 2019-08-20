@@ -1,19 +1,67 @@
+body {
+    overflow: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+    border-radius: 5px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+    border: 1px solid #6c757d!important;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover, .list-group-item.active {
+  background: #7386D5;
+    border: none;
+}
+
+@media screen and (max-width: 992px) {
+    body {
+        max-width: 992px !important;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        max-width: 600px !important;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    body {
+        min-width: 992px !important;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    body {
+        min-width: 600px !important;
+    }
+}
+
 input, textarea {
     color: white !important;
 }
 
 .uniColor, .btn-color, .border-btn {
-    background-color: #7386D5!important;
+    background-color: #7386D5 !important;
 }
 .form-control, .form-control:hover, .card-body {
     background-color: #424242 !important;
 }
 
 .btn-color:hover {
-    background-color: #6d7fcc !important;
+    background-color: #7386D5 !important;
 }
 .navbar {
-    background-color: #6d7fcc !important;
+    background-color: #7386D5 !important;
     margin-bottom: 10px !important;
 }
 #navbarDropdownMenuLink {
@@ -264,15 +312,10 @@ a.article,a.article:hover {
 #list_table {
     margin-top: 12px !important;
 }
-/*.h-815 {*/
-/*    min-height: 815px !important;*/
-/*}*/
-/*#output_view {*/
-/*    min-height: 811px !important;*/
-/*}*/
-/*.h-450 {*/
-/*    min-height: 450px !important;*/
-/*}*/
+
+#preview_screen {
+    display: none;
+}
 
 .hw-output {
     min-height: 125px;
@@ -301,6 +344,10 @@ a.article,a.article:hover {
     overflow-x: auto !important;
     overflow-y: hidden !important;
 }
+.overflow-x {
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+}
 footer {
     margin-top: 24px !important;
 }
@@ -318,11 +365,57 @@ footer {
 .contents-list {
     margin: 0;
     padding: 0;
+    display: table;
+    min-height: 440px !important;
+}
+
+.vert-center-text {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    font-family: "Arial", Times, serif;
+    transform: translateY(-50%);
+    margin: 0 auto;
+}
+
+.vert-center-text h1 {
+    color: white;
+}
+
+#preview_lists {
+    padding: 20px;
+}
+
+.vert-center-container {
+    position:relative;
+}
+
+video {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.video-default-view {
+    min-height: 350px !important;
+    margin: 0;
     width: 100%;
     height: 100%;
     display: table;
-    min-height: 440px !important;
-    padding: 20px !important;
+    padding: 15px !important;
+}
+
+.play-view-list {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    display: table;
+    min-height: 50px !important;
+    padding: 15px !important;
 }
 
 .inside {
@@ -364,20 +457,10 @@ footer {
     height: 200px !important;
 }
 
-@media screen and (min-width: 601px) {
-    div.contents-list {
-        font-size: 50px;
-    }
-}
-
 @media screen and (max-width: 600px) {
     div.contents-list {
         font-size: 30px;
     }
-}
-
-.text-view {
-    font-size: .9vw !important;
 }
 
 .modal-content {
@@ -385,7 +468,7 @@ footer {
 }
 
 #btn-add.dropdown-toggle::after {
-    right: 0px !important;
+    right: 0 !important;
 }
 
 .mg-left-12 {
@@ -402,6 +485,10 @@ footer {
 
 .mg-bottom-15 {
     margin-bottom: 15px !important;
+}
+
+.mg-top-3 {
+    margin-top: 3px !important;
 }
 
 .chk-container {
@@ -472,4 +559,30 @@ footer {
 .hidden_div {
     display: none;
 }
+
+.container-mg-lists {
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+}
+
+
+.h-763-serlist {
+    height: 763px;
+}
+
+.panel-lists {
+    width: 30% !important;
+}
+
+.list-group-item {
+   -webkit-border-radius: 0;
+-moz-border-radius: 0;
+border-radius: 0;
+}
+
+/*.panel-lists.footer-bottom {*/
+/*    position: absolute;*/
+/*      bottom: 0;*/
+/*      left: 0;*/
+/*}*/
 
