@@ -1,7 +1,9 @@
 $(document).ready(function () {
     $('#removeText, #default-prev, #play-view').hide();
+    $('#btn-present').prop('disabled', true).css('cursor', 'not-allowed');
     previewScreen(true);
     getTitles();
+    getServiceLists();
     getDataLists();
 
     $(".data_lists").click(function() {
@@ -80,9 +82,8 @@ function previewScreen(bool) {
     }
 }
 
-
 function getTitles() {
-    let data_array = ["Unod Bukog", "Mr. Swabe", "Dayang-dayang", "Tambay", "7 years old", "Lol"];
+     let data_array = ["Unod Bukog", "Mr. Swabe", "Dayang-dayang", "Tambay", "7 years old", "Lol", "Unod Bukog", "Mr. Swabe", "Dayang-dayang", "Tambay", "7 years old", "Lol", "Unod Bukog", "Mr. Swabe", "Dayang-dayang", "Tambay", "7 years old", "Lol"];
     let html = "";
     _.forEach(data_array, function (value, key) {
         html += ' <tr class="table-row">' +
@@ -97,6 +98,18 @@ function getTitles() {
     });
     $('#list_table').html(html);
 }
+
+function getServiceLists() {
+    let data_array = ["Unod Bukog", "Mr. Swabe", "Dayang-dayang", "Tambay", "7 years old", "Lol"];
+    // let data_array = ["Unod Bukog", "Mr. Swabe", "Dayang-dayang", "Tambay", "7 years old", "Lol", "Unod Bukog", "Mr. Swabe", "Dayang-dayang", "Tambay", "7 years old", "Lol", "Unod Bukog", "Mr. Swabe", "Dayang-dayang", "Tambay", "7 years old", "Lol"];
+    let html = "";
+    _.forEach(data_array, function (value, key) {
+        html += '<a class="list-group-item list-group-item-action" id="list-'+key+'" data-toggle="list" href="#list-'+key+'" role="tab" aria-controls="'+value+'">'+value+'</a>';
+    });
+
+    $('#list-tab').html(html);
+}
+
 
 function getDataLists() {
     let json_array = [

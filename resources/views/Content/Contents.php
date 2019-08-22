@@ -1,5 +1,5 @@
 <div class="container-fluid">
-    <div class="row h-815">
+    <div class="row h-815 overflow-x">
         <div class="col-3 border-secondary">
             <div class="menus-1">
                 <div class="row">
@@ -25,49 +25,22 @@
                     </div>
                 </div>
             </div>
+            <div class="list-datas-h-784 overflow-x border border-bottom border-secondary">
+                <table class='table table-hover pointer' id="list_table"></table>
+            </div>
 
-            <table class='table table-hover pointer' id="list_table"></table>
         </div>
         <div class="col-9 border border-secondary ">
             <div class="row">
-                <div class="panel-lists ">
-                     <div class="list-group h-763-serlist overflow-x" id="list-tab" role="tablist">
-                      <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Home</a>
-                      <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">Profile</a>
-                      <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages">Messages</a>
-                      <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Settings</a>
-                         <a class="list-group-item list-group-item-action" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Home</a>
-                      <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">Profile</a>
-                      <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages">Messages</a>
-                      <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Settings</a>
-                           <a class="list-group-item list-group-item-action" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Home</a>
-                      <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">Profile</a>
-                      <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages">Messages</a>
-                      <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Settings</a>
-                           <a class="list-group-item list-group-item-action" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Home</a>
-                      <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">Profile</a>
-                      <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages">Messages</a>
-                      <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Settings</a>
-                           <a class="list-group-item list-group-item-action" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Home</a>
-                      <a class="list-group-item list-group-item-action" id="lst-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">Profile</a>
-                      <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages">Messages</a>
-                      <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Settings</a>
-                           <a class="list-group-item list-group-item-action" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Home</a>
-                      <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">Profile</a>
-                      <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages">Messages</a>
-                      <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Settings</a>
+                <div class="panel-lists" >
+                    <div class="list-group h-770-serlist overflow-x border-right border-secondary" id="list-tab" role="tablist"></div>
+                    <div class=" border-top border-right border-secondary btn-service">
+                        <button type="button" class="btn btn-color btn-lg btn-block text-white" id="btn-present"><i class="fas fa-paper-plane"></i> Send to Present</button>
                     </div>
-
-<!--                    <div class="col-12">-->
-<!--                        <button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button>-->
-<!--                    </div>-->
-
-
                 </div>
 
 
-
-                <div class="col-8 border-left border-secondary">
+                <div class="col-8 border-secondary o-auto">
                     <div class="d-flex flex-row-reverse bd-highlight">
 
                         <div class="container">
@@ -113,7 +86,7 @@
                                     </div>
                                 </div>
                                 <hr>
-                                <div class="container-fluid">
+                                <div class="">
                                     <div class="flex-row overflow-y" id="list_data"></div>
                                 </div>
                             </div>
@@ -129,7 +102,7 @@
 <div class="modal fade" id="addSongModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
-            <div class="modal-header">
+            <div class="modal-header uniColor">
                 <h5 class="modal-title text-white" id="exampleModalLabel">Add Song</h5>
             </div>
             <div class="modal-body">
@@ -162,7 +135,7 @@
 
 
             </div>
-            <div class="modal-footer">
+            <div class="modal-footer uniColor">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                 <button type="submit" class="btn btn-primary">Save</button>
             </div>
