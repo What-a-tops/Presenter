@@ -1,54 +1,34 @@
 $(document).ready(function () {
-    $('#removeText, #default-prev, #play-view').hide();
+    $( "#list_tab" ).sortable();
+    // $( "#sortable" ).disableSelection();
+    $('#removeText, #default-prev, #play-view, #serve-lists').hide();
     $('#btn-present').prop('disabled', true).css('cursor', 'not-allowed');
     previewScreen(true);
-    getTitles();
+    getSongList();
     getServiceLists();
     getDataLists();
 
-    $(".data_lists").click(function() {
-        $('.text-view').removeClass('text-white');
-        // $('#card').removeClass('border-white');
-        // $('.cheader').removeClass('text-white');
-        // $('#preview_lists').hide().text($(this).find('p').addClass('text-white').text()).fadeIn('slow');
+    $(".data_lists").on('click', function() {
+        $('.text-view').removeClass('text-dark');
+        $('.card-body').addClass('default-color');
+
 
         previewScreen(false);
 
         let text = $(this).find('p').attr('data').replace(/<br ?\/?>/g, "\r\n");
         $('#preview_lists').hide().text(text).fadeIn('slow');
-        $(this).find('p').addClass('text-white');
+        $(this).find('p').addClass('text-dark');
+        $(this).removeClass('default-color');
+    });
 
-         // let data = $('#preview_lists').hide().text($(this).find('p').attr('data'));
-
-        // console.log($(this).find('p').attr('data'));
-
-        // $('#card').removeClass('border-secondary').addClass('border-white');
-        // $('.cheader').removeClass('text-secondary').addClass('text-white');
+    $('.list-songs').on('click', function () {
+        let check = !$(this).find('input.chk-list').prop('checked');
+        $(this).find('input.chk-list').prop('checked', check);
+        checkIfCheck($(this).find('input.chk-list').prop('checked'));
     });
 
     $('.chk-list').on('change', function() {
-        let numberOfChecked = $('input.chk-list:checkbox:checked').length;
-        let totalCheckboxes = $('input.chk-list:checkbox').length;
-        let numberNotChecked = totalCheckboxes - numberOfChecked;
-
-        if(this.checked) {
-            $('.menus-2').show();
-            $('.menus-1').hide();
-
-            if (totalCheckboxes === numberOfChecked) {
-                $('#chk-all').prop( "checked", true);
-            }
-        } else {
-            if (totalCheckboxes === numberNotChecked) {
-                $('#chk-all').prop( "checked", false );
-                $('.menus-2').hide();
-                $('.menus-1').show();
-            }
-
-            if (totalCheckboxes !== numberOfChecked) {
-                $('#chk-all').prop( "checked", false);
-            }
-        }
+        checkIfCheck(this.checked);
     });
 
     $('#chk-all').on('change', function () {
@@ -62,10 +42,89 @@ $(document).ready(function () {
         }
     });
 
-    $('.toggle-event').change(function() {
-      $('#console-event').html('Toggle: ' + $(this).prop('checked'))
+     $('#chk-all-service').on('change', function () {
+        let length = $('input.chk-service:checkbox').length;
+        for (let i = 0; i < length; i++) {
+            $('#chk-service-'+i).prop( "checked", !!this.checked);
+            if (!this.checked) {
+                 $('.service-list').show();
+                 $('#serve-lists').hide();
+            }
+        }
     });
+
+    $('.list-service').on('click', function (e) {
+        e.preventDefault();
+        $('.list-service').removeClass('active').css('transition', 'all 0.3s');
+        $(this).addClass('active').css('transition', 'all 0.3s');
+        $('#btn-present').prop('disabled', false).css('cursor', 'pointer');
+
+        let check = !$(this).find('input.chk-service').prop('checked');
+        $(this).find('input.chk-service').prop('checked', check);
+
+        checkIfCheckService($(this).find('input.chk-service').prop('checked'));
+    });
+
+     $('.chk-service').on('change', function() {
+        checkIfCheckService(this.checked);
+    });
+
+     $('.toggle-event').change(function() {
+        $('#console-event').html('Toggle: ' + $(this).prop('checked'));
+    });
+
 });
+
+function checkIfCheck(check) {
+    let numberOfChecked = $('input.chk-list:checkbox:checked').length;
+    let totalCheckboxes = $('input.chk-list:checkbox').length;
+    let numberNotChecked = totalCheckboxes - numberOfChecked;
+
+    if(check) {
+        $('.menus-2').show();
+        $('.menus-1').hide();
+
+        if (totalCheckboxes === numberOfChecked) {
+            $('#chk-all').prop( "checked", true);
+        }
+    } else {
+        if (totalCheckboxes === numberNotChecked) {
+            $('#chk-all').prop( "checked", false );
+            $('.menus-2').hide();
+            $('.menus-1').show();
+        }
+
+        if (totalCheckboxes !== numberOfChecked) {
+            $('#chk-all').prop( "checked", false);
+        }
+    }
+}
+
+function checkIfCheckService(check) {
+    let numberOfChecked = $('input.chk-service:checkbox:checked').length;
+    let totalCheckboxes = $('input.chk-service:checkbox').length;
+    let numberNotChecked = totalCheckboxes - numberOfChecked;
+
+    if(check) {
+        $('.service-list').hide();
+        $('#serve-lists').show();
+
+        if (totalCheckboxes === numberOfChecked) {
+            $('#chk-all-service').prop( "checked", true);
+        }
+    } else {
+        if (totalCheckboxes === numberNotChecked) {
+            $('#chk-all-service').prop( "checked", false );
+
+            $('.service-list').show();
+            $('#serve-lists').hide();
+        }
+
+        if (totalCheckboxes !== numberOfChecked) {
+            $('#chk-all-service').prop( "checked", false);
+        }
+    }
+}
 
 function previewScreen(bool) {
     $('#preview_screen').show();
@@ -82,34 +141,48 @@ function previewScreen(bool) {
     }
 }
 
-function getTitles() {
-     let data_array = ["Unod Bukog", "Mr. Swabe", "Dayang-dayang", "Tambay", "7 years old", "Lol", "Unod Bukog", "Mr. Swabe", "Dayang-dayang", "Tambay", "7 years old", "Lol", "Unod Bukog", "Mr. Swabe", "Dayang-dayang", "Tambay", "7 years old", "Lol"];
+function getSongList() {
+    let data_array = ["Unod Bukog", "Mr. Swabe", "Dayang-dayang", "Tambay", "7 years old", "Lol", "Unod Bukog", "Mr. Swabe", "Dayang-dayang", "Tambay", "7 years old", "Lol", "Unod Bukog", "Mr. Swabe", "Dayang-dayang", "Tambay", "7 years old", "Lol"];
     let html = "";
-    _.forEach(data_array, function (value, key) {
-        html += ' <tr class="table-row">' +
-            '<td class="align-content-center">' +
-            '<label class="chk-container">' +
-            '<input type="checkbox" class="chk-list" id="chk-list-'+key+'">' +
-            '<span class="checkmark"></span>' +
-            '</label>' +
-            '</td>' +
-            '<td>'+value+'</td>' +
-            '</tr>';
-    });
+
+    if (data_array.length > 0) {
+         _.forEach(data_array, function (value, key) {
+            html += ' <tr class="table-row d-flex list-songs">' +
+                '<td class="align-content-center col-2">' +
+                '<label class="chk-container">' +
+                '<input type="checkbox" class="chk-list" id="chk-list-'+key+'">' +
+                '<span class="checkmark"></span>' +
+                '</label>' +
+                '</td>' +
+                '<td class="col-10">'+value+'</td>' +
+                '</tr>';
+        });
+    } else {
+        html = '<p class="border-bottom-0 text-center text-white border-top border-secondary">No List Found.</p>';
+    }
+
     $('#list_table').html(html);
 }
 
 function getServiceLists() {
     let data_array = ["Unod Bukog", "Mr. Swabe", "Dayang-dayang", "Tambay", "7 years old", "Lol"];
-    // let data_array = ["Unod Bukog", "Mr. Swabe", "Dayang-dayang", "Tambay", "7 years old", "Lol", "Unod Bukog", "Mr. Swabe", "Dayang-dayang", "Tambay", "7 years old", "Lol", "Unod Bukog", "Mr. Swabe", "Dayang-dayang", "Tambay", "7 years old", "Lol"];
     let html = "";
-    _.forEach(data_array, function (value, key) {
-        html += '<a class="list-group-item list-group-item-action" id="list-'+key+'" data-toggle="list" href="#list-'+key+'" role="tab" aria-controls="'+value+'">'+value+'</a>';
-    });
+    if (data_array.length > 0) {
+        _.forEach(data_array, function (value, key) {
+            html += '<li class="list-group-item list-service border-left-0 border-right-0 border-secondary" data-key="'+key+'">' +
+                '<label class="chk-container">' +
+                '<input type="checkbox" class="chk-service" id="chk-service-'+key+'">' +
+                '<span class="checkmark"></span>'
+                +value+
+                '</li>';
+        });
+    } else {
+        html = '<p class="border-bottom-0 text-center text-white border-top border-secondary">No List Found.</p>';
+        $('#btn-present').prop('disabled', true);
+    }
 
-    $('#list-tab').html(html);
+    $('#list_tab').html(html);
 }
-
 
 function getDataLists() {
     let json_array = [
@@ -127,24 +200,31 @@ function getDataLists() {
     ];
 
     let html = "";
-    _.forEach(json_array, function(value) {
-        let count = 1;
-        _.forEach(value.lyrics, function (val) {
-            html +=
-                '<div class="container-mg-lists">' +
-                '<div class="card border-secondary" id="card">' +
-                '<b class="card-header text-left btn-color text-white">Slide' +
-                count++ +
-                '</b>' +
-                '<div class="card-body pointer data_lists">' +
-                '<blockquote class="">' +
-                '<p class="text-view" data="'+val+'">'+val+'</p>' +
-                '</blockquote>' +
-                '</div>' +
-                '</div>' +
-                '</div>';
+
+    if (json_array.length > 0) {
+         _.forEach(json_array, function(value) {
+            let count = 1;
+            _.forEach(value.lyrics, function (val) {
+                html +=
+                    '<div class="container-mg-lists">' +
+                    '<div class="card border-secondary" id="card">' +
+                    '<b class="card-header text-left btn-color text-white">Slide' +
+                    count++ +
+                    '</b>' +
+                    '<div class="card-body pointer data_lists default-color">' +
+                    '<blockquote class="">' +
+                    '<p class="text-view text-light" data="'+val+'">'+val+'</p>' +
+                    '</blockquote>' +
+                    '</div>' +
+                    '</div>' +
+                    '</div>';
+            });
         });
-    });
+    } else {
+        html = '<p class="border-bottom-0 text-center text-white border-secondary">No List Found.</p>';
+    }
+
+
     $('#list_data').html(html);
 }
 
@@ -228,14 +308,16 @@ $('#saveSong').on('submit', function (e) {
 
 });
 
- // function myFunction() {
- //      if (video.paused) {
- //        video.play();
- //        btn.innerHTML = "Pause";
- //      } else {
- //        video.pause();
- //        btn.innerHTML = "Play";
- //      }
- // }
+
+
+// function myFunction() {
+//      if (video.paused) {
+//        video.play();
+//        btn.innerHTML = "Pause";
+//      } else {
+//        video.pause();
+//        btn.innerHTML = "Play";
+//      }
+// }
 
 

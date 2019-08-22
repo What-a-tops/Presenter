@@ -6,7 +6,7 @@
     </div>
 
     <ul class="list-unstyled components" id="menus">
-        <li class="active">
+        <li class="">
              <a href="#">
                  <i class="fas fa-tachometer-alt"></i>
                 Dashboard

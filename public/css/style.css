@@ -50,16 +50,13 @@ input, textarea {
     color: white !important;
 }
 
-.uniColor, .btn-color, .border-btn {
+.uniColor, .btn-color, .border-btn, .btn-color:hover {
     background-color: #7386D5 !important;
 }
-.form-control, .form-control:hover, .card-body, .list-group-item {
+.form-control, .form-control:hover, .list-group-item, .default-color {
     background-color: #424242 !important;
 }
 
-.btn-color:hover {
-    background-color: #7386D5 !important;
-}
 .navbar {
     background-color: #7386D5 !important;
     margin-bottom: 10px !important;
@@ -302,10 +299,7 @@ a.article,a.article:hover {
 .wew {
     border: 1px solid white !important;
 }
-.pointer {
-    cursor: pointer !important;
-    color: white !important;
-}
+
 .menus {
     margin-top: 10px;
 }
@@ -376,6 +370,10 @@ footer {
     font-family: "Arial", Times, serif;
     transform: translateY(-50%);
     margin: 0 auto;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    line-height: unset !important;
 }
 
 .vert-center-text h1 {
@@ -460,6 +458,12 @@ video {
     height: 200px !important;
 }
 
+.data_lists:hover {
+    transition: all 0.5s;
+     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    color: white;
+}
+
 @media screen and (max-width: 600px) {
     div.contents-list {
         font-size: 30px;
@@ -494,13 +498,16 @@ video {
     margin-top: 3px !important;
 }
 
+.mg-top-7 {
+    margin-top: 7px !important;
+}
+
 .chk-container {
     display: block;
     position: relative;
     padding-left: 35px;
     margin-bottom: 12px;
     cursor: pointer;
-    font-size: 22px;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -527,7 +534,8 @@ video {
 }
 
 .chk-container:hover input ~ .checkmark {
-    background-color: #ccc;
+    background-color: #7386D5 !important;
+    border: 1px solid white !important;
     transition: all 0.3s;
 }
 
@@ -568,9 +576,8 @@ video {
     padding-right: 5px !important;
 }
 
-
-.h-770-serlist {
-    height: 770px;
+.h-730-serlist {
+    height: 730px;
 }
 
 .panel-lists {
@@ -582,6 +589,8 @@ video {
     -moz-border-radius: 0;
     border-radius: 0;
     color: white !important;
+    transition: unset !important;
+    height: 50px !important;
 }
 
 ::-webkit-scrollbar-thumb:hover, .list-group-item.active {
@@ -604,10 +613,61 @@ video {
     height: 55px !important;
 }
 
+.button:active,
+ button:active,
+.button:focus,
+ button:focus {
+    outline:none !important;
+}
 
-/*.panel-lists.footer-bottom {*/
-/*    position: absolute;*/
-/*      bottom: 0;*/
-/*      left: 0;*/
-/*}*/
+.list-group-item:last-child, .list-group-item:first-child  {
+    border-radius: 0px !important;
+}
 
+#list_table tr:hover {
+    background-color: #7386D5 !important;
+    color: white !important;
+    transition: all 0.5s;
+}
+
+#list_tab li:hover {
+    background-color: rgba(0,0,0,.1);
+}
+
+.serve-1 {
+    height: 40px;
+}
+
+.alias {cursor: alias;}
+.all-scroll {cursor: all-scroll;}
+.auto {cursor: auto;}
+.cell {cursor: cell;}
+.context-menu {cursor: context-menu;}
+.col-resize {cursor: col-resize;}
+.copy {cursor: copy;}
+.crosshair {cursor: crosshair;}
+.default {cursor: default;}
+.e-resize {cursor: e-resize;}
+.ew-resize {cursor: ew-resize;}
+.help {cursor: help;}
+.move {cursor: move;}
+.n-resize {cursor: n-resize;}
+.ne-resize {cursor: ne-resize;}
+.nesw-resize {cursor: nesw-resize;}
+.ns-resize {cursor: ns-resize;}
+.nw-resize {cursor: nw-resize;}
+.nwse-resize {cursor: nwse-resize;}
+.no-drop {cursor: no-drop;}
+.none {cursor: none;}
+.not-allowed {cursor: not-allowed;}
+.pointer {cursor: pointer;}
+.progress {cursor: progress;}
+.row-resize {cursor: row-resize;}
+.s-resize {cursor: s-resize;}
+.se-resize {cursor: se-resize;}
+.sw-resize {cursor: sw-resize;}
+.text {cursor: text;}
+.w-resize {cursor: w-resize;}
+.wait {cursor: wait;}
+.zoom-in {cursor: zoom-in;}
+.zoom-out {cursor: zoom-out;}
