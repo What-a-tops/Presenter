@@ -7,8 +7,6 @@
     <list default="true" id="ddef7740-ee1a-429f-b994-1d157c9375b6" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/../PV/.idea/PV.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../PV/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app1.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app1.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Content/Contents.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Content/Contents.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Project_Mgmnt/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/../Project_Mgmnt/public/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Project_Mgmnt/public/js/app1.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Project_Mgmnt/public/js/app1.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Project_Mgmnt/resources/views/Home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Project_Mgmnt/resources/views/Home.blade.php" afterDir="false" />
@@ -318,7 +316,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="jsx.switch.disabled" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Presenter-Electron" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../PV" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -359,15 +357,16 @@
       <workItem from="1566260137292" duration="1242000" />
       <workItem from="1566265926848" duration="24901000" />
       <workItem from="1566432077687" duration="29535000" />
-      <workItem from="1566518272253" duration="2820000" />
+      <workItem from="1566518272253" duration="3405000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="130702000" />
+    <option name="totallyTimeSpent" value="131287000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26812366" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
