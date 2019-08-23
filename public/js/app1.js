@@ -70,29 +70,16 @@ $(document).ready(function () {
         checkIfCheckService(this.checked);
     });
 
-    // $('#toggle-live').on('change.bootstrapSwitch', function(e) {
-    //     console.log(e.target.checked);
-    // });
-    // $("#toggle-live").bootstrapSwitch({
-    //     'size': 'mini',
-    //     'onSwitchChange': function(event, state){
-    //         console.log('switched...')
-    //     },
-    //     'AnotherName':'AnotherValue'
-    // });
+    $('#toggle-live').on('change.bootstrapSwitch', function(e) {
+        // console.log(e.target.checked);
+        if (e.target.checked) {
+            console.log('open');
+        } else {
+            console.log('close');
+        }
+    });
 
 });
-
-function terms_change(checkbox){
-    //If it is checked.
-    if(checkbox.checked){
-        alert('Checkbox has been ticked!');
-    }
-    //If it has been unchecked.
-    else{
-        alert('Checkbox has been unticked!');
-    }
-}
 
 function checkIfCheck(check) {
     let numberOfChecked = $('input.chk-list:checkbox:checked').length;
@@ -152,7 +139,7 @@ function previewScreen(bool) {
         $('#default-prev').show();
         $('#play-view').hide();
         // $('#toggle-live').attr('Disabled');
-        console.log( $('#toggle-live'));
+        // console.log( $('#toggle-live'));
     } else {
         $('#default-prev').hide();
         $('#play-view').show();

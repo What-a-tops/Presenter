@@ -69,9 +69,7 @@
                                 <div class="col-sm">
                                     <div class="d-flex flex-row-reverse bd-highlight">
                                         <div class="p2 bd-highlight float-right mg-top-3">
-                                            <input id="toggle-live" type="checkbox" data-toggle="toggle" data-onstyle="success" data-height="10" data-size="small" onclick="terms_change(this)">
-<!--                                            <input name="field_name" class="switcher" type="checkbox" data-size="small" value="1">
-                                           <input type="checkbox" id="terms" value="1" onclick="terms_change(this)" />-->
+                                            <input id="toggle-live" type="checkbox" data-toggle="toggle" data-onstyle="success" data-height="10" data-size="small">
                                         </div>
                                         <div class=" bd-highlight text-white f-25 lead float-right">Live&nbsp;</div>
                                     </div>
