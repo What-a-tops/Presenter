@@ -478,7 +478,11 @@ video {
     right: 0 !important;
 }
 
-.mg-left-12 {
+.mg-left-20 {
+    margin-left: 20px !important;
+}
+
+.mg-left-12{
     margin-left: 12px !important;
 }
 
@@ -631,7 +635,8 @@ video {
 }
 
 #list_tab li:hover {
-    background-color: rgba(0,0,0,.1);
+    background-color: #7386D5 !important;
+    transition: all 0.5s;
 }
 
 .serve-1 {

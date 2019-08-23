@@ -1,8 +1,9 @@
 $(document).ready(function () {
+    $('[data-tooltip="tooltip"]').tooltip({ boundary: 'window' })
     $( "#list_tab" ).sortable();
-    // $( "#sortable" ).disableSelection();
     $('#removeText, #default-prev, #play-view, #serve-lists').hide();
     $('#btn-present').prop('disabled', true).css('cursor', 'not-allowed');
+
     previewScreen(true);
     getSongList();
     getServiceLists();
@@ -11,7 +12,6 @@ $(document).ready(function () {
     $(".data_lists").on('click', function() {
         $('.text-view').removeClass('text-dark');
         $('.card-body').addClass('default-color');
-
 
         previewScreen(false);
 
@@ -49,14 +49,15 @@ $(document).ready(function () {
             if (!this.checked) {
                  $('.service-list').show();
                  $('#serve-lists').hide();
+                 $('#btn-present').prop('disabled', true).css('cursor', 'not-allowed');
             }
         }
     });
 
     $('.list-service').on('click', function (e) {
         e.preventDefault();
-        $('.list-service').removeClass('active').css('transition', 'all 0.3s');
-        $(this).addClass('active').css('transition', 'all 0.3s');
+        $('.list-service').removeClass('active').css('transition', 'all 0.5s');
+        $(this).addClass('active').css('transition', 'all 0.5s');
         $('#btn-present').prop('disabled', false).css('cursor', 'pointer');
 
         let check = !$(this).find('input.chk-service').prop('checked');
@@ -69,11 +70,29 @@ $(document).ready(function () {
         checkIfCheckService(this.checked);
     });
 
-     $('.toggle-event').change(function() {
-        $('#console-event').html('Toggle: ' + $(this).prop('checked'));
-    });
+    // $('#toggle-live').on('change.bootstrapSwitch', function(e) {
+    //     console.log(e.target.checked);
+    // });
+    // $("#toggle-live").bootstrapSwitch({
+    //     'size': 'mini',
+    //     'onSwitchChange': function(event, state){
+    //         console.log('switched...')
+    //     },
+    //     'AnotherName':'AnotherValue'
+    // });
 
 });
+
+function terms_change(checkbox){
+    //If it is checked.
+    if(checkbox.checked){
+        alert('Checkbox has been ticked!');
+    }
+    //If it has been unchecked.
+    else{
+        alert('Checkbox has been unticked!');
+    }
+}
 
 function checkIfCheck(check) {
     let numberOfChecked = $('input.chk-list:checkbox:checked').length;

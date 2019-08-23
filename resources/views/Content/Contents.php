@@ -4,7 +4,7 @@
             <div class="menus-1 ">
                 <div class="row">
                     <div class="col-4 mg-left-8">
-                        <button type="button" data-toggle="modal" data-target="#addSongModal" data-backdrop="static" data-keyboard="false" class="btn btn-info btn-color btn-sm border border-btn"><i class="fas fa-plus"></i></button>
+                        <button type="button" data-toggle="modal" data-tooltip="tooltip" data-placement="top" title="Add New" data-target="#addSongModal" data-backdrop="static" data-keyboard="false" class="btn btn-info btn-color btn-sm border border-btn"><i class="fas fa-plus"></i></button>
                     </div>
                     <div class="col-7 pull-right mg-left-16">
                         <input class="form-control form-control-sm border-secondary border-secondary" type="text" placeholder="Search">
@@ -20,8 +20,8 @@
                             <span class="checkmark"></span>
                     </div>
                     <div class="col-8">
-                        <button type="button" id="deleteList" data-toggle="modal" data-target="#deleteModal" class="btn btn-sm btn-danger border-danger" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fas fa-trash-alt"></i></button>
-                        <button type="button" class="btn btn-sm btn-color border-btn text-white" data-toggle="tooltip" data-placement="top" title="Send to Service"><i class="fas fa-share-square"></i></button>
+                        <button type="button" id="deleteList" data-toggle="modal" data-tooltip="tooltip" data-placement="top" title="Delete" data-target="#deleteModal" class="btn btn-sm btn-danger border-danger"><i class="fas fa-trash-alt"></i></button>
+                        <button type="button" class="btn btn-sm btn-color border-btn text-white" data-tooltip="tooltip" data-placement="top" title="Send to Service"><i class="fas fa-share-square"></i></button>
                     </div>
                 </div>
             </div>
@@ -35,14 +35,14 @@
                 <div class="panel-lists border-right border-secondary">
                     <div class="serve-1">
                         <p class="h4 text-white text-center service-list">Lists</p>
-                        <div class="row mg-top-7" id="serve-lists">
-                            <div class="col-1 mg-left-12">
+                        <div class="row" id="serve-lists">
+                            <div class="col-1 mg-left-20">
                                 <label class="chk-container">
-                                    <input type="checkbox" class="chk-all-service" id="chk-all-service">
-                                    <span class="checkmark"></span>
+                                    <input type="checkbox" class="chk-all-service mg-top-7" id="chk-all-service">
+                                    <span class="checkmark mg-top-7"></span>
                             </div>
                             <div class="col-8">
-                                <button type="button" id="deleteList" data-toggle="modal" data-target="#removeListService" class="btn btn-sm btn-danger border-danger" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fas fa-trash-alt"></i></button>
+                                <button type="button" id="deleteList" data-toggle="modal" data-target="#removeListService" data-tooltip="tooltip" data-placement="top" title="Remove" class="btn btn-sm btn-danger border-danger mg-top-7"><i class="fas fa-trash-alt"></i></button>
                             </div>
                         </div>
                     </div>
@@ -69,7 +69,9 @@
                                 <div class="col-sm">
                                     <div class="d-flex flex-row-reverse bd-highlight">
                                         <div class="p2 bd-highlight float-right mg-top-3">
-                                            <input id="toggle-live" type="checkbox" data-toggle="toggle" data-onstyle="success" data-height="10" data-size="small">
+                                            <input id="toggle-live" type="checkbox" data-toggle="toggle" data-onstyle="success" data-height="10" data-size="small" onclick="terms_change(this)">
+<!--                                            <input name="field_name" class="switcher" type="checkbox" data-size="small" value="1">
+                                           <input type="checkbox" id="terms" value="1" onclick="terms_change(this)" />-->
                                         </div>
                                         <div class=" bd-highlight text-white f-25 lead float-right">Live&nbsp;</div>
                                     </div>
@@ -92,7 +94,7 @@
                                         </div>
 
                                         <div class="col-xs-12 vert-center-container" id="play-view">
-                                            <video autoplay muted loop>
+                                            <video autoplay muted loop preload="none">
                                                 <source src="https://mdbootstrap.com/img/video/Sail-Away.mp4" />
                                             </video>
                                             <div class="vert-center-text">
